@@ -1,6 +1,12 @@
+import { generateUsername } from 'unique-username-generator';
+
+
 let $dropContainer = document.getElementById('dropContainer');
+let $name = document.getElementById('name');
 let $file = document.getElementById('file');
 let $toast = document.getElementById('toast');
+
+$name.value = generateUsername();
 
 $dropContainer.addEventListener('dragover', e => e.preventDefault());
 $dropContainer.addEventListener('dragenter', e => e.preventDefault());
