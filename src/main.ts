@@ -1,6 +1,5 @@
 import { generateUsername } from 'unique-username-generator';
 
-
 let $dropContainer = document.getElementById('dropContainer');
 let $name = document.getElementById('name');
 let $file = document.getElementById('file');
@@ -16,8 +15,7 @@ $dropContainer.addEventListener('drop', e => {
   playVideo();
 });
 
-document.querySelector('#selectFile').addEventListener('click', e => {
-  e.preventDefault();
+$dropContainer.addEventListener('click', () => {
   $file.click();
 });
 

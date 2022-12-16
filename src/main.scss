@@ -57,7 +57,9 @@ input:focus {
 #dropContainer {
   border: 2px dashed #000;
   border-radius: 5px;
+  cursor: pointer;
   display: flex;
+  flex-direction: column;
   place-items: center;
   place-content: center;
   margin: 5vh 0 -15vh 0;
@@ -65,19 +67,12 @@ input:focus {
   height: 25vh;
 }
 
+#dropContainer img {
+  height: 4.5rem;
+}
+
 #file {
   display: none;
-}
-
-#selectFile {
-  appearance: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-#selectFile img {
-  height: 6em;
 }
 
 #toast {
