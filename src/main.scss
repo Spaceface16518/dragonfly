@@ -18,15 +18,11 @@ h1 {
   margin: -10vh 0 15vh 0;
 }
 
-#inputs {
-  display: flex;
+label {
+  font-size: 1.2rem;
 }
 
-.field {
-  display: flex;
-}
-
-input, .black {
+input, #join {
   appearance: textfield;
   background: none;
   border: 2px solid #000;
@@ -34,7 +30,6 @@ input, .black {
   font-size: 1.2rem;
   text-align: center;
   padding: .25em .5em;
-  width: 175px;
 }
 
 input:focus {
@@ -42,25 +37,21 @@ input:focus {
 }
 
 #name {
-  border-radius: 0 5px 5px 0;
+  width: 200px;
   margin-right: 2em;
 }
 
 #joinCode {
+  width: 125px;
   border-radius: 5px 0 0 5px;
 }
 
-.black {
+#join {
   background-color: #000;
   border-radius: 0 5px 5px 0;
   color: #fff;
   cursor: pointer;
-  width: 100px;
-}
-
-label.black {
-  border-radius: 5px 0 0 5px;
-  font-size: 1.2rem;
+  width: 75px;
 }
 
 #dropContainer {
