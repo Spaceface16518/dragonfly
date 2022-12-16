@@ -10,10 +10,15 @@
 <body>
   <form>
     <h1>Dragonfly</h1>
-    <div>
-      <label for="name">Name: </label>
-      <input id="name" type="text" placeholder="Name">
-      <input id="joinCode" type="number" placeholder="Join Code"><button id="join">Join</button>
+    <div id="inputs">
+      <div class="field">
+        <label class="black" for="name">Name</label>
+        <input id="name" type="text" placeholder="Name">
+      </div>
+      <div class="field">
+        <input id="joinCode" type="number" placeholder="Join Code">
+        <button class="black" id="join">Join</button>
+      </div>
     </div>
     <div id="dropContainer">
       <button id="selectFile"><img src="src/upload-folder.svg"></button>
