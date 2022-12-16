@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dragonfly</title>
+  <link rel="stylesheet" href="src/main.scss">
+</head>
+<body>
+  <form>
+    <h1>Dragonfly</h1>
+    <div>
+      <input id="name" type="text" placeholder="Name">
+      <input id="joinCode" type="number" placeholder="Join Code"><button id="join">Join</button>
+    </div>
+    <div id="dropContainer">
+      <button id="selectFile"><img src="src/upload-folder.svg"></button>
+    </div>
+  </form>
+  <input type="file" name="filename" id="file">
+  <div id="toast">Loading file x.mkv</div>
+</body>
+<script type="module" src="src/main.ts"></script>
 </html>

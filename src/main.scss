@@ -1,0 +1,93 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+form {
+  background-color: #f9f4ea;
+  height: 100%;
+  place-items: center;
+  place-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: serif;
+  margin: -10vh 0 15vh 0;
+}
+
+input, #join {
+  appearance: textfield;
+  background: none;
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+  padding: .25em .5em;
+}
+
+input:focus {
+  outline: none;
+}
+
+#name {
+  width: 200px;
+  margin-right: 2em;
+}
+
+#joinCode {
+  width: 125px;
+  border-radius: 5px 0 0 5px;
+}
+
+#join {
+  background-color: #000;
+  border-radius: 0 5px 5px 0;
+  color: #fff;
+  cursor: pointer;
+  width: 75px;
+}
+
+#dropContainer {
+  border: 2px dashed #000;
+  border-radius: 5px;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  margin: 5vh 0 -15vh 0;
+  width: min(90vw, 600px);
+  height: 25vh;
+}
+
+#file {
+  display: none;
+}
+
+#selectFile {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#selectFile img {
+  height: 6em;
+}
+
+#toast {
+  background-color: #000;
+  border-radius: 5px;
+  bottom: 2em;
+  color: #fff;
+  display: none;
+  font-family: sans-serif;
+  padding: .75em 2em;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#toast.show {
+  display: block;
+}
