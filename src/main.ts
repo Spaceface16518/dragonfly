@@ -1,9 +1,9 @@
 import { generateUsername } from 'unique-username-generator';
 
-let $dropContainer = document.getElementById('dropContainer');
-let $name = document.getElementById('name');
-let $file = document.getElementById('file');
-let $toast = document.getElementById('toast');
+let $dropContainer = document.querySelector<HTMLDivElement>('#dropContainer')!;
+let $name = document.querySelector<HTMLInputElement>('#name')!;
+let $file = document.querySelector<HTMLInputElement>('#file')!;
+let $toast = document.querySelector<HTMLDivElement>('toast')!;
 
 // Use a random username as the default display name if none is set already
 if (!$name.value) $name.value = generateUsername();
@@ -13,12 +13,12 @@ $dropContainer.addEventListener('dragover', e => e.preventDefault());
 $dropContainer.addEventListener('dragenter', e => e.preventDefault());
 // Handle drag-and-drop of files
 $dropContainer.addEventListener('drop', e => {
-  // Prevent the default action
-  e.preventDefault();
-  // Set the file input's value to the dropped files
-  $file.files = e.dataTransfer.files;
-  // Process the file
-  playVideo();
+	// Prevent the default action
+	e.preventDefault();
+	// Set the file input's value to the dropped files
+	$file.files = e.dataTransfer?.files || null;
+	// Process the file
+	playVideo();
 });
 
 // Clicking in the drop zone should trigger the file input
@@ -28,13 +28,18 @@ $dropContainer.addEventListener('click', () => $file.click());
 $file.addEventListener('change', playVideo);
 
 function playVideo() {
-  showToast('Loading file ' + $file.files[0].name + '…');
+	const file = $file.files?.[0];
+	if (!file) {
+		showToast('No file selected');
+		return;
+	}
+	showToast('Loading file ' + file.name + '…');
 }
 
-function showToast(message) {
-  // Function to show the user a message
-  $toast.innerText = message;
-  $toast.classList.add('show');
-  // Hide the message in 5 seconds
-  setTimeout(() => $toast.classList.remove('show'), 5000);
+function showToast(message: string) {
+	// Function to show the user a message
+	$toast.innerText = message;
+	$toast.classList.add('show');
+	// Hide the message in 5 seconds
+	setTimeout(() => $toast.classList.remove('show'), 5000);
 }
