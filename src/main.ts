@@ -1,9 +1,9 @@
 import { generateUsername } from 'unique-username-generator';
 
-let $dropContainer = document.querySelector<HTMLDivElement>('#dropContainer')!;
-let $name = document.querySelector<HTMLInputElement>('#name')!;
-let $file = document.querySelector<HTMLInputElement>('#file')!;
-let $toast = document.querySelector<HTMLDivElement>('toast')!;
+let $dropContainer: HTMLDivElement = document.querySelector('#dropContainer')!;
+let $name: HTMLInputElement = document.querySelector('#name')!;
+let $file: HTMLInputElement = document.querySelector('#file')!;
+let $toast: HTMLDivElement = document.querySelector('#toast')!;
 
 // Use a random username as the default display name if none is set already
 if (!$name.value) $name.value = generateUsername();
