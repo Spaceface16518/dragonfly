@@ -38,7 +38,6 @@ input:focus {
 
 #name {
   width: 200px;
-  margin-right: 2em;
 }
 
 #joinCode {
@@ -89,4 +88,20 @@ input:focus {
 
 #toast.show {
   display: block;
+}
+
+
+.text-field-container {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 0.5em;
+	align-items: center;
+
+	& .field-label {
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
 }

@@ -1,12 +1,7 @@
-import { generateUsername } from 'unique-username-generator';
-
 let $dropContainer: HTMLDivElement = document.querySelector('#dropContainer')!;
 let $name: HTMLInputElement = document.querySelector('#name')!;
 let $file: HTMLInputElement = document.querySelector('#file')!;
 let $toast: HTMLDivElement = document.querySelector('#toast')!;
-
-// Use a random username as the default display name if none is set already
-if (!$name.value) $name.value = generateUsername();
 
 // Prevent browser's default drag-and-drop action in the drop zone
 $dropContainer.addEventListener('dragover', e => e.preventDefault());

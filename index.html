@@ -1,27 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dragonfly</title>
-  <link rel="stylesheet" href="src/main.scss">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dragonfly</title>
+    <link rel="stylesheet" href="src/main.scss">
 </head>
+
 <body>
-  <form>
-    <h1>Dragonfly</h1>
-    <div>
-      <label for="name">Name: </label>
-      <input id="name" type="text" placeholder="Display Name" required>
-      <input id="joinCode" type="number" placeholder="Join Code"><button id="join">Join</button>
-    </div>
-    <div id="dropContainer">
-      <p>Or choose file:</p>
-      <img src="src/upload-folder.svg">
-    </div>
-  </form>
-  <input type="file" name="filename" id="file">
-  <div id="toast"></div>
+    <form>
+        <h1>Dragonfly</h1>
+        <div class="text-field-container">
+            <label for="name">
+                <span class="field-label">Name:</span>
+                <input id="name" type="text" placeholder="Display Name" name="name" required>
+            </label>
+            <div>
+                <input id="joinCode" type="number" placeholder="Join Code"><button id="join">Join</button>
+            </div>
+        </div>
+        <div id="dropContainer">
+            <p>Or choose file:</p>
+            <img src="src/upload-folder.svg">
+        </div>
+    </form>
+    <input type="file" name="filename" id="file">
+    <div id="toast"></div>
 </body>
 <script type="module" src="src/main.ts"></script>
+
 </html>
