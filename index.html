@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Dragonfly</title>
+    <link rel="stylesheet" href="src/main.scss" />
+  </head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Dragonfly</title>
-	<link rel="stylesheet" href="src/main.scss">
-</head>
-
-<body>
-	<form>
-		<h1>Dragonfly</h1>
-		<div class="text-field-container">
-			<label for="name">
-				<span class="field-label">Name:</span>
-				<input id="name" type="text" placeholder="Display Name" name="name">
-			</label>
-			<div>
-				<input id="joinCode" type="number" placeholder="Join Code"><input type="submit"
-					value="Join" id="join">
-			</div>
-		</div>
-		<div id="dropContainer">
-			<p>Or choose file:</p>
-			<img src="src/upload-folder.svg">
-			<input type="file" name="filename" id="file">
-		</div>
-	</form>
-	<div id="toast-container">
-		<template id="toast-template">
-			<div class="toast"></div>
-		</template>
-	</div>
-</body>
-<script src="src/main.ts"></script>
-
+  <body>
+    <form>
+      <h1>Dragonfly</h1>
+      <div class="text-field-container">
+        <label for="name">
+          <span class="field-label">Name:</span>
+          <input id="name" type="text" placeholder="Display Name" name="name" />
+        </label>
+        <div>
+          <input id="joinCode" type="number" placeholder="Join Code" /><input
+            type="submit"
+            value="Join"
+            id="join"
+          />
+        </div>
+      </div>
+      <div id="dropContainer">
+        <p>Or choose file:</p>
+        <img src="src/upload-folder.svg" />
+        <input type="file" name="filename" id="file" />
+      </div>
+    </form>
+    <div id="toast-container">
+      <template id="toast-template">
+        <div class="toast"></div>
+      </template>
+    </div>
+  </body>
+  <script src="src/main.ts"></script>
 </html>

@@ -17,19 +17,19 @@ form {
   flex-direction: column;
 
   & .text-field-container {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	gap: 0.5em;
-	align-items: center;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5em;
+    align-items: center;
 
-	& .field-label {
-		@media (max-width: 600px) {
-			display: none;
-		}
-	}
-}
+    & .field-label {
+      @media (max-width: 600px) {
+        display: none;
+      }
+    }
+  }
 }
 
 h1 {
@@ -48,7 +48,7 @@ input {
   border-radius: 5px;
   font-size: 1.2rem;
   text-align: center;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
 
   &:focus {
     outline: none;
@@ -92,9 +92,9 @@ input {
 }
 
 #toast-container {
-	position: fixed;
-	right: 0;
-	top: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 #toast {
@@ -103,6 +103,5 @@ input {
   bottom: 2em;
   color: #fff;
   display: none;
-  padding: .75em 2em;
+  padding: 0.75em 2em;
 }
-
