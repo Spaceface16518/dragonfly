@@ -1,16 +1,35 @@
 body {
+  background-color: #f9f4ea;
   font-family: sans-serif;
-  height: 100vh;
+  min-height: 100vh;
   margin: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
 }
 
 form {
-  background-color: #f9f4ea;
   height: 100%;
   place-items: center;
   place-content: center;
   display: flex;
   flex-direction: column;
+
+  & .text-field-container {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	gap: 0.5em;
+	align-items: center;
+
+	& .field-label {
+		@media (max-width: 600px) {
+			display: none;
+		}
+	}
+}
 }
 
 h1 {
@@ -22,7 +41,7 @@ label {
   font-size: 1.2rem;
 }
 
-input, #join {
+input {
   appearance: textfield;
   background: none;
   border: 2px solid #000;
@@ -30,27 +49,25 @@ input, #join {
   font-size: 1.2rem;
   text-align: center;
   padding: .25em .5em;
-}
 
-input:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
 
-#name {
   width: 200px;
-}
 
-#joinCode {
-  width: 125px;
-  border-radius: 5px 0 0 5px;
-}
+  &#joinCode {
+    width: 125px;
+    border-radius: 5px 0 0 5px;
+  }
 
-#join {
-  background-color: #000;
-  border-radius: 0 5px 5px 0;
-  color: #fff;
-  cursor: pointer;
-  width: 75px;
+  &#join {
+    background-color: #000;
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    cursor: pointer;
+    width: 75px;
+  }
 }
 
 #dropContainer {
@@ -74,6 +91,12 @@ input:focus {
   display: none;
 }
 
+#toast-container {
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
 #toast {
   background-color: #000;
   border-radius: 5px;
@@ -81,27 +104,5 @@ input:focus {
   color: #fff;
   display: none;
   padding: .75em 2em;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
-#toast.show {
-  display: block;
-}
-
-
-.text-field-container {
-	width: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: center;
-	gap: 0.5em;
-	align-items: center;
-
-	& .field-label {
-		@media (max-width: 600px) {
-			display: none;
-		}
-	}
-}
