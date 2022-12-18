@@ -12,4 +12,6 @@ export default function setupDrop($drop: HTMLDivElement) {
 
   const $file = $drop.querySelector<HTMLInputElement>("#file")!;
   $drop.onclick = () => $file.click();
+
+  return $drop;
 }
